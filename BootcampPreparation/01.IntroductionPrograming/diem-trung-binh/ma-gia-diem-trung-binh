@@ -1,0 +1,30 @@
+BEGIN
+IN PUT Diem vat ly, hoa hoc, sinh hoc
+DTB = (Diem vat ly, hoa hoc, sinh hoc)/3
+DISPLAY "DIEM TRUNG BINH"
+END
+
+BEGIN
+INPUT USD
+VND = USD*23000
+DISPLAY "VND"
+END
+
+BEGIN
+INPUT A, B, C
+MAX = A
+IF MAX < B THEN
+MAX = B
+END IF
+IF MAX < C THEN
+MAX = C
+END IF
+END
+
+
+
+
+
+
+     
+    
