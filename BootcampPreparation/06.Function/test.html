@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tìm số lớn nhất</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script language="javascript">
+            
+            function compareNumber(a, b)
+            {
+                if (a > b){
+                    alert("Số thứ nhất lớn hơn số thú hai");
+                }
+                else if (a < b){
+                    alert("Số thứ nhất bé hơn số thú hai");
+                } else {
+                    alert("Số thứ nhất bằng số thứ hai");
+                }
+            }
+
+            var a = parseInt(prompt("Nhập vào số đầu tiên"));
+            var b = parseInt(prompt("Nhập vào số thứ hai"));
+
+            compareNumber(a, b);
+            
+        </script>
+    </body>
+</html>

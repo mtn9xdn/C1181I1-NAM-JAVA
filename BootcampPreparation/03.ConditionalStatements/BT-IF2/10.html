@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chương trình giá điện</title>
+    
+</head>
+
+<body>
+    <script>
+        var x = parseFloat(prompt("Nhập kWh"));
+        var vnd1 = x * 1000;
+        var vnd2 = x * 1000 + x * 500;
+        var vnd3 = x * 1000 + x * 1000;
+        var vnd4 = x * 1000 + x * 1200;
+        if (x <= 100) {
+            alert("Tiền cần đóng là  " + vnd1 + " VNĐ");
+        } else if (x > 100 && x <= 200) {
+            alert("Tiền cần đóng là  " + vnd2 + " VNĐ");
+        } else if (x > 200 && x <= 250) {
+            alert("Tiền cần đóng là  " + vnd3 + " VNĐ");
+        } else {
+            alert("Tiền Cần Đóng Là  " + vnd4 + " VNĐ");
+        }
+
+    </script>
+</body>
+
+</html>

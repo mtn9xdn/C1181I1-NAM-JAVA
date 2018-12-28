@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="">
+    <script>
+        var nhapStar = prompt("Enter Star");
+        var star = ["Polaris","Aldebaran","Deneb", "Vega", "Altair", "Dubhe và Regulus"];
+        var constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major và Leo"];
+        var result = showConstellation(star);
+
+        function showConstellation(star) {
+            for (i = 0; i < star.length; i++) {
+                if (nhapStar === star[i]) {
+                    alert(constellation[i]);
+                    break;
+                }
+            }
+            return result;
+        }
+    
+    </script>
+
+</body>
+
+</html>

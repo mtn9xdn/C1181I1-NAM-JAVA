@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fibonacci chia hết cho 5</title>
+    <h1>Fibonacci</h1>
+</head>
+
+<body>
+
+    <script>
+        var n1 = 0;
+        var n2 = 1;
+        var num = parseInt(prompt("Số lượng Fibonacci cần tìm"));
+        
+        for (var i = 2; i < num; i++) {
+            var n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            if (n3 % 5 == 0) {
+                document.write(n3 + "<br>");
+                break;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

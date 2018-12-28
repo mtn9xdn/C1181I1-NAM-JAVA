@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cước Điện Thoại</title>
+    
+</head>
+
+<body>
+    <script>
+        var x = parseFloat(prompt("Số phút đã gọi"));
+        var pcd = 25000;
+        var phi1 = 0.01 * ((x - 200) * 200 + (150 * 400) + (50 * 600)) + pcd;
+        var phi2 = 0.01 * ((x - 50) * 400 + (50 * 600)) + pcd;
+        var phi3 = 0.01 * ((x * 600)) + pcd;
+        if (x > 200) {
+            alert("Số Tiền Phải Đóng Là " + phi1 + " VNĐ");
+        } else if (x > 50 && x < 200) {
+            alert("Số Tiền Phải Đóng Là " + phi2 + " VNĐ");
+        } else {
+            alert("Số Tiền Phải Đóng Là " + phi3 + " VNĐ");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+    <p>This example </p>
+
+
+
+    <script>
+        function date(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            this.showDate = function () {
+                return "Day is: " + day +" "+ "Month is: " + month +" "+ "Year is: " + year;
+            }
+        }
+        var day1 = new date(13, 12, 2018);
+        console.log(day1.showDate());
+
+
+
+    </script>
+
+</body>
+
+</html>

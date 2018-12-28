@@ -1,0 +1,45 @@
+<script>
+    var array = [1, 25, 50, 75, 76, 81, 82, 88, 100];
+    var number = parseInt(prompt("Đoán số "));
+    console.log(guessNumber(number));
+
+
+    function guessNumber(value) {
+        var index = -1;
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == number && number == 82) {
+                alert("Correct");
+                index = i + 1;
+                break;
+            }
+            if (array[i] == number && number == 50) {
+                alert("Too low");
+                index = i + 1;
+
+            }
+            if (array[i] == number && number == 76) {
+                alert("Too low");
+                index = i + 1;
+            }
+            if (array[i] == number && number == 88) {
+                alert("Too Hight");
+                index = i + 1;
+            }
+            if (array[i] == number && number == 81) {
+                alert("Too low");
+                index = i + 1;
+            }
+            if (array[i] == number && number == 84) {
+                alert("Too Hight");
+                index = i + 1;
+            }else {
+                return false;
+            }
+
+        } return index;
+
+    }
+
+
+
+</script>

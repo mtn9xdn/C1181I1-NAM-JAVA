@@ -1,0 +1,20 @@
+<script>
+    // Create A Class with 3 way:
+    //1.
+    function student(name, age, mail) {
+        this.name = name;
+        this.age = age;
+        this.mail = mail;
+        this.showInfo = function () {
+            return 'name : ' + name + '; age :' + age + '; mail :' + mail;
+        }
+    }
+    var student1 = new student('Nam', 14, 'abc@gmail.com');
+    console.log(student1.name);
+    console.log(student1.age);
+    console.log(student1.mail);
+    console.log(student1.showInfo());
+
+
+
+</script>

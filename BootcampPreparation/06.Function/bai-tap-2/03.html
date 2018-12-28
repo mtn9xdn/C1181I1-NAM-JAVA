@@ -1,0 +1,15 @@
+<script>
+    
+    //Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
+    var number = parseInt(prompt("Please input a number for factorial calculating"));
+    var factorial = factorial(number);
+    document.write("Factorial is " + factorial);
+
+    function factorial(number) {
+        var result = 1;
+        for (var i = 1; i <= number; i++) {
+            result = result * i;
+        }
+        return result;
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Faking</title>
+</head>
+
+<body>
+    <center>
+        <h2>Tính Cả Rồi</h2>
+        <form name="f">
+            <textarea name="txt" style="color:red" cols="40" rows="6" onkeydown="typeTextarea();"></textarea>
+        </form>
+    </center>
+    <script>
+        var a = new Array(), n = "";
+        a[1] = 'T'; a[2] = 'H'; a[3] = 'Ậ'; a[4] = 'T'; a[5] = ' '; a[6] = 'L'; a[7] = 'À'; a[8] = ' '; a[9] = 'B'; a[10] = 'Á'; a[11] = ' ';a[12] = 'Đ'; a[13] = 'Ạ'; a[14] = 'O'; a[15] = ' '; a[16] = 'G'; a[17] = 'H'; a[18] = 'Ê'; a[19] = '!';  a[20] = '!'; a[21] = '!'; a[22] = '~';
+        function typeTextarea() {
+            t = document.f.txt.value;
+            j = t.length;
+            if (j > 0) {
+                for (var i = 1; i <= j; i++) {
+                    n = n + a[i];
+                    if (i == 22) {
+                        document.f.txt.value = "";
+                        n = "";
+                    }
+                }
+            }
+            document.f.txt.value = n;
+            n = "";
+            setTimeout("typeTextarea()", 1);
+            
+        }
+    </script>
+</body>
+<html>

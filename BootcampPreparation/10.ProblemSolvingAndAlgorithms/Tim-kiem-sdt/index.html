@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Validate Account</title>
+</head>
+
+<body>
+    <script>
+        var sdt = " ";
+        function checkPhone(number) {
+            var pattern = /^03[2-9{1}][0-9{7}]$/;
+            return pattern.test(number);
+        }
+
+        var phoneNumber = prompt("Nhập Phone Number Viettel ");
+        document.write(checkPhone(phoneNumber));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<head>
+    <meta charset=utf-8 />
+    <title>Check Date</title>
+</head>
+
+<body>
+    <script>
+        function testDate(number) {
+            var pattern = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+            return pattern.test(number);
+        }
+        var checkDate = prompt("Nhập Date ");
+        document.write(testDate(checkDate));
+
+    </script>
+</body>
+
+</html>

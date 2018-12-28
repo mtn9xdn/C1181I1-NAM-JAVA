@@ -1,0 +1,25 @@
+<head>
+    <meta charset=utf-8 />
+    <title>Count Word</title>
+</head>
+
+<body>
+    <script>
+        function countWord(str) {
+            var count = 0;
+            for (var i = 0; i < str.length; i++){
+                if(isNaN(str[i])){
+                    count ++;
+                }
+                
+            }return count;
+
+
+        }
+        var checkWord = prompt("Nhập Word ");
+        document.write(countWord(checkWord));
+
+    </script>
+</body>
+
+</html>

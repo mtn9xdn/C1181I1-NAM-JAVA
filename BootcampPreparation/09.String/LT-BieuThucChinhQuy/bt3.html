@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Đếm số nguyên âm/phụ âm</title>
+   
+</head>
+
+<body>
+    <script>
+        var string = prompt("Nhập Chuỗi ");
+        console.log("Số nguyên âm là " + countVowel(string));
+        console.log("Số Phụ âm là " + countConsonant(string));  
+        
+        function countVowel(str) {
+            var count = 0;
+            var pattern = /[uUeEoOaAiI]/;
+            for (var i = 0; i < str.length; i++) {
+                if (pattern.test(str[i])) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        
+        function countConsonant(str) {
+            var count = 0;
+            var pattern = /[bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ]/;
+            for (var j = 0; j < str.length; j++) {
+                if (pattern.test(str[j])) {
+                    count++;
+                }
+            }
+            return count;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

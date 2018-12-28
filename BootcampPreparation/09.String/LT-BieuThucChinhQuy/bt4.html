@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mã bảo mật</title>
+
+</head>
+
+<body>
+    <script>
+
+        var code = prompt("Nhập Mã");
+        console.log(testCode(code));
+        
+        function testCode(str) {
+            string = /(^[A-Z]{3})-([0-9]{4})-([A-Z]{3})/;
+            if (string.test(str)) {
+                return true;
+
+            } else {
+                return false;
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

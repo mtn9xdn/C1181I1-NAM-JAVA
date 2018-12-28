@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thuế thu nhập cá nhân</title>
+
+</head>
+
+<body>
+    <script>
+        var vnd = parseFloat(prompt("Số tiền lương hàng tháng"));
+        var vnd1 = vnd * 5 / 100;
+        var vnd2 = vnd * 10 / 100;
+        var vnd3 = vnd * 15 / 100;
+        if (vnd <= 5000000) {
+            alert("Tiền thuế bạn phải đóng là " + vnd1 + " VNĐ");
+        } else {
+            if (vnd > 5000000 && vnd <= 10000000) {
+                alert("Tiền thuế bạn phải đóng là " + vnd2 + " VNĐ");
+            } else {
+                if (vnd > 10000000 && vnd <= 20000000) {
+                    alert("Tiền thuế bạn phải đóng là " + vnd3 + " VNĐ");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

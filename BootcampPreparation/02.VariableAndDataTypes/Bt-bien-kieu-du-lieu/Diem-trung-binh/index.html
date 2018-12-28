@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Điểm Học Sinh</h1>
+    <p id="diemTrungBinh">Điểm Trung Bình</p>
+    <button type="button" onclick="showDiemTrungBinh()">Trung Bình</button>
+    <p id="diemTong">Điểm Tổng</p>
+    <button type="button" onclick="showTongDiem()">Tổng</button>
+
+    <script>
+        var diemVatLy = parseInt(prompt("Vật Lý"));
+        var diemHoaHoc = parseInt(prompt("Hóa Học"));
+        var diemSinhHoc = parseInt(prompt("Sinh Học"));
+        var diemTrungBinh = (diemVatLy + diemHoaHoc + diemSinhHoc) / 3;
+        var tongdiem = diemHoaHoc + diemSinhHoc + diemVatLy;
+
+        function showDiemTrungBinh() {
+            document.getElementById("diemTrungBinh").innerHTML = "Điểm Trung Bình " + diemTrungBinh;
+        }
+
+        function showTongDiem() {
+            document.getElementById("diemTong").innerHTML = "Tổng Điểm " + tongdiem;
+        }
+
+    </script>
+</body>
+
+</html>

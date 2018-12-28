@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Adam & Eva</title>
+</head>
+
+<body>
+    <script>
+        // Táo
+        var Apple = function (weight) {
+
+            this.weight = 10;
+
+            this.decrease = function () {
+                if (this.weight > 0) {
+                    this.weight--;
+                }
+            }
+            this.isEmpty = function () {
+                return this.weight == 0;
+            }
+            this.getWeight = function () {
+                return this.weight;
+            }
+        }
+        // Người
+        var Human = function (name, gender, weight) {
+
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+
+            this.say = function () {
+                console.log("Hi everyone !!!");
+            };
+            this.eat = function (apple) {
+                if (this.checkWeightApple(apple)) {
+                    this.weight++;
+                    apple.decrease();
+                }
+            };
+            this.checkWeightApple = function (apple) {
+                return !apple.isEmpty();
+            };
+            this.getName = function () {
+                return this.name;
+            };
+            this.getGender = function () {
+                return this.gender;
+            };
+            this.getWeight = function () {
+                return this.weight;
+            };
+        // Đối tượng
+        }
+        var adam = new Human("Adam", "Male", 70);
+        var eva = new Human("Eva", "Female", 50);
+        var apple = new Apple();
+
+        while (!apple.isEmpty()) {
+            adam.eat(apple);
+            eva.eat(apple);
+        }
+        adam.say();
+        eva.say();
+        console.log("Adam Weight: ", adam.getWeight());
+        console.log("Eva Weight: ", eva.getWeight());
+        console.log("Apple Weight: ", apple.getWeight());
+
+    </script>
+
+
+
+</body>
+
+</html>

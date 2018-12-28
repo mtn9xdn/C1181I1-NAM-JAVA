@@ -1,0 +1,12 @@
+<script>
+    //Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.
+
+    var char = prompt("Please input a character");
+    var isNumeric = isNumeric(char);
+    document.write("is char is numeric?  <---- " + isNumeric);
+
+
+    function isNumeric(char) {
+        return !isNaN(char);
+    }
+</script>

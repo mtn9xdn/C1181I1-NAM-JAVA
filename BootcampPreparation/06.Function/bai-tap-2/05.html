@@ -1,0 +1,19 @@
+<script>
+    //Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    var min = getMin(2, -1, 5);
+    document.write("Min is " + min);
+
+
+    function getMin(numb1, numb2, numb3) {
+        var min = numb1;
+
+        if (min > numb2) {
+            min = numb2;
+        }
+
+        if (min > numb3) {
+            min = numb3;
+        }
+        return min;
+    }
+</script>

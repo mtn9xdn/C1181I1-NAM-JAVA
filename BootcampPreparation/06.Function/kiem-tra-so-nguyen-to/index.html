@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    var number = parseInt(prompt("Nhập Số Nguyên Tố: "));
+    var isNguyento = isNguyento(number);
+    showMessage(isNguyento);
+
+
+
+    function showMessage(message) {
+        document.write(message);
+    }
+
+    function isNguyento(number) {
+        var result = true;
+        for (i = 2; i < number - 1; i++) {
+            if (number % i == 0) {
+                result = false;
+                break;
+            }
+        } return result;
+    }
+
+</script>

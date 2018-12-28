@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Số nguyên</title>
+</head>
+
+<body>
+    <script>
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
+        var numbers = parseInt(prompt("Nhập số nguyên"));
+        var indexNumbers = - 1;
+
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == numbers) {
+                indexNumbers = i;
+                break;
+            }
+        }
+        console.log("Mảng ban đầu là " + array.join());
+
+        if (indexNumbers >= 0) {
+            for (var i = indexNumbers; i < array.length - 1; i++) {
+                array[i] = array[i + 1];
+            }
+            array.pop();
+        }
+        console.log("Mảng đã được loại bỏ là " + array.join());
+    </script>
+</body>
+
+</html>

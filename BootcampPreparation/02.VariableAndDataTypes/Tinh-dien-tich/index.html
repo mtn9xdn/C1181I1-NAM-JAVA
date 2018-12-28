@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Tính Diện Tích</h1>
+    <p id="demo">Diện Tích !!!</p>
+    <button type="button" onclick="showArea()">Tính</button>
+
+    <script>
+        var width;
+        var height;
+        var width = parseInt(prompt("Chiều Rộng"));
+        var height = parseInt(prompt("Chiều Dài"));
+        var area = width * height;
+
+        function showArea() {
+            document.getElementById("demo").innerHTML = "Area is " + area;
+        }</script>
+</body>
+
+</html>

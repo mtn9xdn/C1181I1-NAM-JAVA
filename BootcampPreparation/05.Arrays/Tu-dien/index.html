@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tra Từ Điển</title>
+    <h1>Từ Điển</h1>
+</head>
+
+<body>
+    <input type="text" id="tdValue" />
+    <input type="button" id="tdTiengViet" value="Tiếng Việt" onclick=showTudienV(); />
+    <input type="button" id="tdTiengAnh" value="Tiếng Anh" onclick=showTudienA(); />
+    <p id="result"></p>
+    <script>
+        var vietNamese = ["Nhà", "Cá", "Gà", "Heo", "Chó"];
+        var engLish = ["Home", "Fish", "Chicken", "Pig", "Dog"];
+        function showTudienV() {
+            var word = document.getElementById("tdValue").value;
+            for (var i = 0; i < vietNamese.length; i++) {
+                if (word === vietNamese[i]) {
+                    document.getElementById("result").innerHTML = engLish[i];
+                    break;
+                }
+            }
+        }
+        function showTudienA() {
+            var word = document.getElementById("tdValue").value;
+            for (var i = 0; i < engLish.length; i++) {
+                if (word === engLish[i]) {
+                    document.getElementById("result").innerHTML = vietNamese[i];
+                    break;
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

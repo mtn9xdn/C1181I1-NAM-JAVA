@@ -1,0 +1,17 @@
+<script>
+    //Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+
+    var radius = parseFloat(prompt("Input Radius"));
+    var area = area(radius);
+    var circum = circum(radius);
+    document.write("Area is " + area + " and Circum is " + circum);
+
+    function area(radius) {
+        return Math.PI * radius * radius;
+    }
+
+    function circum(radius) {
+        return radius * 2 * Math.PI;
+    }
+
+</script>

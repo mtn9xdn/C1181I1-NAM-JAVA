@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Validate Account</title>
+</head>
+
+<body>
+    <script>
+        function validate(Account) {
+            var pattern = /^[_a-z0-9]{6,}$/;
+            return pattern.test(Account);
+        }
+
+        var checkAccount = prompt("Nhập Account ");
+        document.write(validate(checkAccount));
+
+
+    </script>
+</body>
+
+</html>

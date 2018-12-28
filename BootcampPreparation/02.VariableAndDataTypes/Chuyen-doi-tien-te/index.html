@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Chuyển đổi tiền tệ</h1>
+    Số Lượng&nbsp;<input type="number" id="txtAmount"></br>Chuyển &ensp;
+
+    <select type="text" id="txtFrom">
+        <option value="txtVnd">VND</option>
+        <option value="txtUsd">USD</option>
+        <option value="txtEur">EUR</option>
+        <option value="txtCny">CNY</option>
+
+    </select></br>Qua&emsp;&ensp;&nbsp;&ensp;
+    </select>
+
+    <select type="text" id="txtTo">
+        <option value="txtVnd2">VND</option>
+        <option value="txtUsd2">USD</option>
+        <option value="txtEur2">EUR</option>
+        <option value="txtCny2">CNY</option>
+    </select>
+    <input type="button" onclick="tienTe()" value="Chuyển đổi">
+    <p id="showResult"></p>
+
+    <script>
+
+
+        function tienTe() {
+            var amount = document.getElementById("txtAmount").value;
+            var from = document.getElementById("txtFrom").value;
+            var to = document.getElementById("txtTo").value;
+            var result;
+            if (from === "txtUsd" && to === "txtVnd2") {
+                result = amount * 23000;
+            } document.getElementById("showResult").innerHTML = result + " VND";
+            if (from === "txtVnd" && to === "txtVnd2") {
+                result = amount;
+            } document.getElementById("showResult").innerHTML = result + " VND";
+            if (from === "txtCny" && to === "txtVnd2") {
+                result = amount * 3480;
+            } document.getElementById("showResult").innerHTML = result + " VND";
+            if (from === "txtEur" && to === "txtVnd2") {
+                result = amount * 26400;
+            } document.getElementById("showResult").innerHTML = result + " VND";
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

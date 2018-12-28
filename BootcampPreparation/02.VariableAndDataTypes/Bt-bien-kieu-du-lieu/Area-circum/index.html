@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Hình Tròn</h1>
+    Nhập Bán Kính
+    <input type="text" id="txtRadius" oninput="showDientich()"><span id="dientichTxt"></span><br>
+    Nhập Bán Kính
+    <input type="text" id="txtRadius" oninput="showChuvi()"><span id="chuviTxt"></span>
+
+    <script>
+
+        function showDientich() {
+            var radius = document.getElementById("txtRadius").value;
+            var area = (radius * radius) * 3.14;
+            document.getElementById("dientichTxt").innerHTML = "Diện Tích là " + area;
+        }
+        function showChuvi() {
+            var radius = document.getElementById("txtRadius").value;
+            var circum = radius * 2 * 3.14;
+            document.getElementById("chuviTxt").innerHTML = "Chu Vi là " + circum;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Tính độ F</h1>
+    Nhập Độ C <br><input type="number" id="txtDoc">
+    <input type="button" onclick="showdoF()" value="Show Độ F">
+    <p id="result"></p>
+    <script>
+
+        function showdoF() {
+            var a = document.getElementById("txtDoc").value;
+            var b = a * 33.8;
+            document.getElementById("result").innerHTML = "Độ F là: " + b;
+        }
+    </script>
+</body>
+
+</html>

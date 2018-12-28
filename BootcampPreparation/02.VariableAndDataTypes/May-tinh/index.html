@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Caculator</title>
+
+</head>
+
+<body>
+    <div id="maytinh" style="border: 1px black solid; width: 120px; padding: 20px 20px 20px 20px">
+
+        <input type="text" style="width:100px;" class="show" id="ketqua" /> <br></br>
+
+        <div>
+            <input type="button" value="7" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" value="8" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" value="9" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" class="nut operator" value="/" style="width:23px;" onclick="ketqua.value+=this.value" /><br></br>
+        </div>
+
+        <div>
+            <input type="button" value="4" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" value="5" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" value="6" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" class="nut operator" value="*" style="width:24px;" onclick="ketqua.value+=this.value" /><br></br>
+        </div>
+
+        <div>
+            <input type="button" value="1" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" value="2" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" value="3" class="nut num" onclick="ketqua.value+=this.value" />
+            <input type="button" class="nut operator" value="+" onclick="ketqua.value+=this.value" /><br></br>
+
+
+        </div>
+
+        <div>
+            <input type="button" value="0" class="nut khong num" onclick="ketqua.value+=this.value" />
+            <input type="button" class="nut " value="." style="width:24px;" onclick="ketqua.value+=this.value" />
+            <input type="button" class="nut" value="=" style="width:23px;" onclick="ketqua.value=eval(ketqua.value)" />
+            <input type="button" class="nut operator" value="-" style="width:24px;" onclick="ketqua.value+=this.value" />
+        </div>
+    </div>
+</body>
+
+</html>

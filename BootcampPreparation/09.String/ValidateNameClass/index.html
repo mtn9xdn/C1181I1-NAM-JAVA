@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Validate Name Class</title>
+</head>
+
+<body>
+    <script>
+        function className(name) {
+            var pattern = /^[CAB]+[0-9{4}]+[GHIKLM]/;
+            return pattern.test(name);
+
+        }
+        var checkClassName = prompt("Nhập Class Name ");
+        document.write(className(checkClassName));
+
+    </script>
+</body>
+
+</html>
