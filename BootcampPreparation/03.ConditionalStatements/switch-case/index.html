@@ -8,9 +8,8 @@
     </head>
     <h1>Số Ngày Trong Tháng</h1>
     <form>
-        <input type="number" id="txtMonth">
-        <input type="button" onclick="tinhsongay()" value="Số Ngày Trong Tháng">
-        <p id="result"></p>
+        <input type="text" id = "txtMonth" oninput="tinhsongay()">
+        <span id = "result"></span>
         <script>
             function tinhsongay() {
                 var month = parseInt(document.getElementById("txtMonth").value);
@@ -37,7 +36,8 @@
                         break;
 
                 }
-            }</script>
+            }
+        </script>
     </form>
 </body>
 

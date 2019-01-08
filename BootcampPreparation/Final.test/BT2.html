@@ -7,25 +7,20 @@
 
 <body>
     <script>
-        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9,10];
-        var numbers = parseInt(prompt("Nhập số nguyên"));
+        var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var numbers = parseInt(prompt("Nhập số"));
         var indexNumbers = - 1;
+        console.log(tryRemoveFromArray(arr, numbers));
 
-        for (var i = 0; i < array.length; i++) {
-            if (array[i] == numbers) {
-                indexNumbers = i;
-                break;
+        function tryRemoveFromArray(array, index) {
+            if (index >= 0 && index < array.length) {
+                for (var i = index; i < array.length - 1; i++) {
+                    array[i] = array[i + 1];
+                }
+                array.pop();
             }
+            return array;
         }
-        console.log("Mảng ban đầu là " + array.join());
-
-        if (indexNumbers >= 0) {
-            for (var i = indexNumbers; i < array.length - 1; i++) {
-                array[i] = array[i + 1];
-            }
-            array.pop();
-        }
-        console.log("Mảng đã được loại bỏ là " + array.join());
     </script>
 </body>
 

@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Chỉ số cân nặng cơ thể</title>
 </head>
+
 <body>
-<h1>Kiểm Tra BMI</h1>
-Cân Nặng : <input type="text" id="txtWeight" /></br>
-Chiều Cao: <input type="text" id="txtHeight" /></br>
-<button onclick="checkbmi()">Check</button></br>
-<p id="showResult"></p>
-<script>
-    
-function checkbmi() {
-    var weight = parseFloat(document.getElementById("txtWeight").value);
-    var height = parseFloat(document.getElementById("txtHeight").value);
-    var bmi = weight / (height * height);
-    var  result = "";
-    if (bmi < 18.5) {
-        result = "Under Weight";
-    } else if (bmi < 25) {
-        result = "Normal";
-    } else if (bmi < 30) {
-        result = "Over Weight";
-    } else {
-        result = "Obese";
-    }document.getElementById("showResult").innerHTML = result;
-    console.log("Result is ", result);
-}
-</script>
+    <h1>Kiểm Tra BMI</h1>
+    Cân Nặng : <input type="text" id="txtWeight" /></br>
+    Chiều Cao: <input type="text" id="txtHeight" /></br>
+    <button onclick="checkBmi()">Check</button></br>
+    <p id="showResult"></p>
+    <script>
+
+        function checkBmi() {
+            var weight = parseFloat(document.getElementById("txtWeight").value);
+            var height = parseFloat(document.getElementById("txtHeight").value);
+            var bmi = weight / (height * height);
+            var result = "";
+            if (bmi < 18.5) {
+                result = "Under Weight";
+            }
+            else if (bmi < 25) {
+                result = "Normal";
+            }
+            else if (bmi < 30) {
+                result = "Over Weight";
+            }
+            else {
+                result = "Obese";
+            }
+            document.getElementById("showResult").innerHTML = result;
+            console.log("Result is ", result);
+        }
+    </script>
 </body>
+
 </html>

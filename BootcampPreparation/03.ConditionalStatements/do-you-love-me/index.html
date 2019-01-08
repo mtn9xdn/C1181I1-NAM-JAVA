@@ -8,7 +8,7 @@
 <body>
     <h1 style="position:absolute; left : 400px ; top : 200px;font-size: 60px">Do You Love Me?</h1>
     <input type="button" value="Yes" onclick="yesClick()" style="position:absolute; left : 500px; top:320px;font-size: 45px" />
-    <input type="button" value="No" id="noA" onmousemove="noClick()" style="position:absolute; left : 650px; top:320px;font-size: 45px" />
+    <input type="button" value="No" id="choseNo" onmousemove="noClick()" style="position:absolute; left : 650px; top:320px;font-size: 45px" />
     <script>
         function yesClick() {
             alert("Yes. You Are Right \n I'm Very Happy ^^!");
@@ -16,8 +16,8 @@
         function noClick() {
             var a = Math.round(Math.random() * window.innerWidth);
             var b = Math.round(Math.random() * window.innerHeight);
-            document.getElementById("noA").style.left = a + 'px';
-            document.getElementById('noA').style.top = b + 'px';
+            document.getElementById("choseNo").style.left = a + 'px';
+            document.getElementById('choseNo').style.top = b + 'px';
         }
     </script>
 </body>

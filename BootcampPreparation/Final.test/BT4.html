@@ -7,22 +7,23 @@
 
 <script>
 
-
-    var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-    function rectangle(x, y, width, height, ctx) {
+    function rectangle(x, y, width, height, color) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.ctx = ctx;
-        this.draw = function () {
-            this.ctx.fillStyle = "blue";
-            this.ctx.fillRect(10, 10, 200, 100);
+        this.color = color;
+
+        this.render = function (canvas) {
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.fill();
         }
     }
-    var rectangle = new rectangle(10, 10, 200, 100, ctx);
-    rectangle.draw();
+    var canvas = document.getElementById("myCanvas");
+    var rectangle = new rectangle(0,0,200,100,"green");
+    rectangle.render(canvas);
+
 
 </script>

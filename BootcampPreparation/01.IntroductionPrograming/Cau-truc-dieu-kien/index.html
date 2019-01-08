@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <title>Tìm giá trị lớn nhất</title>
+    <h1>Tìm giá trị lớn nhất</h1>
+    Số A<br>
+    <input type="text" id="txtNumberA"><br>
+    Số B<br>
+    <input type="text" id="txtNumberB"><br>
+    Số C<br>
+    <input type="text" id="txtNumberC"><br>
+    <input type="button" id="valueMax" onclick="findMax()" value="Tìm Số Lớn Nhất">
+    <p><span id="result" style="color: red;"></span></p>
+
+    <script>
+
+
+        function findMax() {
+            var numberA = document.getElementById("txtNumberA").value;
+            var numberB = document.getElementById("txtNumberB").value;
+            var numberC = document.getElementById("txtNumberC").value;
+            var max = numberA;
+
+            if (max < numberB) {
+                max = numberB;
+            }
+            if (max < numberC) {
+                max = numberC;
+            }
+            document.getElementById("result").innerHTML = max;
+
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -11,13 +11,14 @@
         <input type="checkbox" onclick="good()" id="checkGood">Good<br>
         <input type="checkbox" onclick="fast()" id="checkFast">Fast<br>
         <input type="checkbox" onclick="cheap()" id="checkCheap">Cheap<br>
-        
+
     </form>
 
     <script>
         function good() {
             var good = document.getElementById("checkGood").checked;
             var fast = document.getElementById("checkFast").checked;
+
             if (good && fast) {
                 document.getElementById("checkCheap").checked = false;
             }
@@ -35,7 +36,8 @@
             if (cheap && good) {
                 document.getElementById("checkFast").checked = false;
             }
-        }</script>
+        }
+    </script>
 </body>
 
 </html>

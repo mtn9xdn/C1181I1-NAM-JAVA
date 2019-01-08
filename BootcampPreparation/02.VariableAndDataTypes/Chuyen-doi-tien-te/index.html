@@ -4,49 +4,76 @@
 <body>
 
     <h1>Chuyển đổi tiền tệ</h1>
-    Số Lượng&nbsp;<input type="number" id="txtAmount"></br>Chuyển &ensp;
+    Số Lượng&nbsp;<input type="text" id="txtAmount" oninput="convert()"></br>Chuyển &ensp;
 
-    <select type="text" id="txtFrom">
+    <select id="txtFrom">
         <option value="txtVnd">VND</option>
         <option value="txtUsd">USD</option>
         <option value="txtEur">EUR</option>
-        <option value="txtCny">CNY</option>
+
 
     </select></br>Qua&emsp;&ensp;&nbsp;&ensp;
     </select>
 
-    <select type="text" id="txtTo">
+    <select id="txtTo">
         <option value="txtVnd2">VND</option>
         <option value="txtUsd2">USD</option>
         <option value="txtEur2">EUR</option>
-        <option value="txtCny2">CNY</option>
+
     </select>
-    <input type="button" onclick="tienTe()" value="Chuyển đổi">
-    <p id="showResult"></p>
+    
+    <p></p><span id="showResult" style="color: red;"></p>
 
     <script>
 
 
-        function tienTe() {
+        function convert() {
             var amount = document.getElementById("txtAmount").value;
             var from = document.getElementById("txtFrom").value;
             var to = document.getElementById("txtTo").value;
             var result;
+
+            //Chuyển Sang VND
             if (from === "txtUsd" && to === "txtVnd2") {
                 result = amount * 23000;
-            } document.getElementById("showResult").innerHTML = result + " VND";
+                document.getElementById("showResult").innerHTML = result + " VND";
+            }
             if (from === "txtVnd" && to === "txtVnd2") {
                 result = amount;
-            } document.getElementById("showResult").innerHTML = result + " VND";
-            if (from === "txtCny" && to === "txtVnd2") {
-                result = amount * 3480;
-            } document.getElementById("showResult").innerHTML = result + " VND";
+                document.getElementById("showResult").innerHTML = result + " VND";
+
+            }
             if (from === "txtEur" && to === "txtVnd2") {
-                result = amount * 26400;
-            } document.getElementById("showResult").innerHTML = result + " VND";
+                result = amount * 26000;
+                document.getElementById("showResult").innerHTML = result + " VND";
+            }
+            //Chuyển Sang USD
+            if (from === "txtUsd" && to === "txtUsd2") {
+                result = amount;
+                document.getElementById("showResult").innerHTML = result + " USD";
+            }
+            if (from === "txtVnd" && to === "txtUsd2") {
+                result = amount / 23000;
+                document.getElementById("showResult").innerHTML = result + " USD";
+            }
+            if (from === "txtEur" && to === "txtUsd2") {
+                result = amount / 1.1;
+                document.getElementById("showResult").innerHTML = result + " USD";
 
+            }//Chuyển sang EUR
+            if (from === "txtUsd" && to === "txtEur2") {
+                result = amount / 1.1;
+                document.getElementById("showResult").innerHTML = result + " EUR";
+            }
+            if (from === "txtVnd" && to === "txtEur2") {
+                result = amount / 26000;
+                document.getElementById("showResult").innerHTML = result + " EUR";
+            }
+            if (from === "txtEur" && to === "txtEur2") {
+                result = amount;
+                document.getElementById("showResult").innerHTML = result + " EUR";
+            }
         }
-
 
     </script>
 

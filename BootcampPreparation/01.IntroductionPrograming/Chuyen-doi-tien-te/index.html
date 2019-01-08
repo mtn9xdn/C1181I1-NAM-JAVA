@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <title>Chuyển Đổi Tiền Tệ</title>
+    <h1>Chuyển Đổi USD Sang VND</h1>
+    <input type="text" id="txtUsd" oninput="convert()"> USD
+    <span id="result" style="color: red;"></span>
+    <script>
+
+
+        function convert() {
+            var usd = document.getElementById("txtUsd").value;
+            var vnd = usd * 23000;
+            document.getElementById("result").innerHTML = " =" + " " + vnd + " VND";
+        }
+
+    </script>
+</body>
+
+</html>
